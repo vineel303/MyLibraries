@@ -1,0 +1,3 @@
+Python terminal's text formatting via:
+	Variables
+	Functions
