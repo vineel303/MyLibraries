@@ -1,4 +1,4 @@
-#variables
+# VARIABLES
 #reset
 Reset = "\033[0m"
 
@@ -14,7 +14,7 @@ Yellow = "\033[33m"
 Magenta = "\033[35m"
 Cyan = "\033[36m"
 
-#functions
+# FUNCTIONS
 def specialPrint(String, Attribute): # to use multiple attributes at once, join them into a single string
     global Reset
     print(f"{Attribute}{String}{Reset}")
