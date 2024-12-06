@@ -1,6 +1,8 @@
+#importing python libraries
 from socket import create_connection
 from time import sleep
 
+# FUNCTIONS
 def checkInternetConnection():
     try:
         create_connection(("8.8.8.8", 53), timeout=5)
@@ -8,7 +10,7 @@ def checkInternetConnection():
     except OSError:
         return False
 
-def checkInternetConnection_withWaiting(sleepTime=1): # goes into sleep until an internet connection is established
+def waitForInternetConnection(sleepTime=1):
     while True:
         if checkInternetConnection():
             break
