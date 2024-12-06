@@ -15,13 +15,15 @@ Magenta = "\033[35m"
 Cyan = "\033[36m"
 
 # FUNCTIONS
-def specialPrint(String, Attribute): # to use multiple attributes at once, join them into a single string
+def specialPrint(String, Attribute, endingCharacter = "\n"): # to use multiple attributes at once, join them into a single string, using +
     global Reset
-    print(f"{Attribute}{String}{Reset}")
+    print(f"{Attribute}{String}{Reset}", end=endingCharacter)
 
-def specialInput(String, AttributeForPrint, AttributeForInput): # to use multiple attributes at once, join them into a single string
+def specialInput(String, AttributeForPrint, AttributeForInput): # to use multiple attributes at once, join them into a single string, using +
     global Reset
+    ###
     print(f"{AttributeForPrint}{String}{Reset}{AttributeForInput}", end="")
     userInput = input()
     print(Reset, end="")
+    ###
     return userInput
